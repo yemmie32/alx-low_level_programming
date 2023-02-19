@@ -28,8 +28,8 @@ int main(void)
 
 					if (c + d + e != 9 + 8 + 7)
 					{
-						putchar(',')
-						putchar(' ')
+						putchar(',');
+						putchar(' ');
 					}
 				}
 
