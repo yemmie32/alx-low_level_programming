@@ -1,19 +1,20 @@
 #include "lists.h"
 
 /**
-* display_listint - prints all the elements of a linked list
-* @intialMemorySize: linked list of type listint_t to print
-* Return: count of nodes
-*/
+ * print_listint - prints all the elements of a linked list
+ * @h: linked list of type listint_t to print
+ * Return: number of nodes
+ */
+size_t print_listint(const listint_t *h)
+{
+size_t num = 0;
 
-size_t display_listint(const listint_t *intialMemorySize)
+while (h)
 {
-size_t iteration = 0;
-while (intialMemorySize)
-{
-printf("%d\n", intialMemorySize->next);
-iteration++;
-intialMemorySize = intialMemorySize->next;
+printf("%d\n", h->n);
+num++;
+h = h->next;
 }
-return (iteration);
+
+return (num);
 }
